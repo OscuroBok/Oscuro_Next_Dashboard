@@ -1,6 +1,12 @@
 git init
 
-git remote add origin https://github.com/OscuroBok/Oscuro_Next_Dashboard.git
+git remote add origin https://github.com/OscuroBok/Oscuro_Next_Dashboard.git -> Add your GitHub repository as a remote
+
+git commit -m "Your commit message"
+
+git add . -> You need to stage the files that you want to commit.
+
+git push -u origin master -> Push the changes to your GitHub repository
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
