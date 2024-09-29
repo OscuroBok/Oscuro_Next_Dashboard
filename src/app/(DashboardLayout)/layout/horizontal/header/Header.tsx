@@ -7,15 +7,13 @@ import { Theme } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { styled } from '@mui/material/styles';
+
 import { useSelector, useDispatch } from '@/store/hooks';
 import { toggleMobileSidebar } from '@/store/customizer/CustomizerSlice';
 import { IconMenu2 } from '@tabler/icons-react';
 import Notifications from '../../vertical/header/Notification';
-import Cart from '../../vertical/header/Cart';
+
 import Profile from '../../vertical/header/Profile';
-import Search from '../../vertical/header/Search';
-import Language from '../../vertical/header/Language';
-import Navigation from '../../vertical/header/Navigation';
 import Logo from '../../shared/logo/Logo';
 import { AppState } from '@/store/store';
 
@@ -46,7 +44,7 @@ const Header = () => {
         }}
       >
         <Box sx={{ width: lgDown ? '45px' : 'auto', overflow: 'hidden' }}>
-          <Logo />
+          {/* <Logo /> */}
         </Box>
         {/* ------------------------------------------- */}
         {/* Toggle Button Sidebar */}
@@ -65,20 +63,16 @@ const Header = () => {
         {/* ------------------------------------------- */}
         {/* Search Dropdown */}
         {/* ------------------------------------------- */}
-        <Search />
-         {lgUp ? (
-          <>
-            <Navigation />
-          </>
-        ) : null}
         <Box flexGrow={1} />
         <Stack spacing={1} direction="row" alignItems="center">
-          <Language />
           {/* ------------------------------------------- */}
           {/* Ecommerce Dropdown */}
           {/* ------------------------------------------- */}
-          <Cart />
-          <Notifications />
+          
+          {/* ------------------------------------------- */}
+          {/* End Ecommerce Dropdown */}
+          {/* ------------------------------------------- */}
+          {/* <Notifications /> */}
           <Profile />
         </Stack>
       </ToolbarStyled>

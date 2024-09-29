@@ -24,14 +24,14 @@ const initialState: StateType = {
   SidebarWidth: 270,
   MiniSidebarWidth: 87,
   TopbarHeight: 70,
-  isLayout: 'boxed', // This can be full or boxed
+  isLayout: 'full', // This can be full or boxed
   isCollapse: false, // to make sidebar Mini by default
   isSidebarHover: false,
   isMobileSidebar: false,
   isHorizontal: false,
   isLanguage: 'en',
   isCardShadow: true,
-  borderRadius: 7,
+  borderRadius: 8,
 };
 
 export const CustomizerSlice = createSlice({
@@ -72,7 +72,6 @@ export const CustomizerSlice = createSlice({
     setBorderRadius: (state: StateType, action) => {
       state.borderRadius = action.payload;
     },
-    
   },
 });
 

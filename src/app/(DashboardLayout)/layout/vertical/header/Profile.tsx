@@ -14,6 +14,8 @@ import * as dropdownData from './data';
 import { IconMail } from '@tabler/icons-react';
 import { Stack } from '@mui/system';
 import Image from 'next/image';
+import { appPaths } from '@/utils/helper/appPaths';
+import useLogout from '@/hooks/useLogout';
 
 
 const Profile = () => {
@@ -24,6 +26,8 @@ const Profile = () => {
   const handleClose2 = () => {
     setAnchorEl2(null);
   };
+
+  const logout = useLogout()
 
   return (
     <Box>
@@ -157,7 +161,7 @@ const Profile = () => {
               <Image src={"/images/backgrounds/unlimited-bg.png"} width={150} height={183} style={{ height: 'auto', width: 'auto' }} alt="unlimited" className="signup-bg" />
             </Box>
           </Box>
-          <Button href="/auth/auth1/login" variant="outlined" color="primary" component={Link} fullWidth>
+          <Button onClick={logout} variant="outlined" color="primary" fullWidth>
             Logout
           </Button>
         </Box>

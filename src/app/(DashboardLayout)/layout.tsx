@@ -2,14 +2,18 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { styled, useTheme } from "@mui/material/styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./layout/vertical/header/Header";
 import Sidebar from "./layout/vertical/sidebar/Sidebar";
-import Customizer from "./layout/shared/customizer/Customizer";
+// import Customizer from "./layout/shared/customizer/Customizer";
 import Navigation from "./layout/horizontal/navbar/Navigation";
 import HorizontalHeader from "./layout/horizontal/header/Header";
 import { useSelector } from "@/store/hooks";
 import { AppState } from "@/store/store";
+import useProfile from "@/hooks/useProfile";
+import Loading from "@/app/loading";
+import useAuth from "@/hooks/useAuth";
+import usePermission from "@/hooks/usePermission";
 
 const MainWrapper = styled("div")(() => ({
   display: "flex",
@@ -40,10 +44,12 @@ export default function RootLayout({
   const [isMobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const customizer = useSelector((state: AppState) => state.customizer);
   const theme = useTheme();
-
+  // const {success} = useProfile();
+  const checking = useAuth();
+  // const permissionChecking = usePermission(success);
+  // console.log('checking', checking)
   return (
-    <MainWrapper>
-      <title>Modernize NextJs 14.0.3</title>
+    checking ? <Loading /> : (<MainWrapper>
       {/* ------------------------------------------- */}
       {/* Sidebar */}
       {/* ------------------------------------------- */}
@@ -86,8 +92,8 @@ export default function RootLayout({
           {/* End Page */}
           {/* ------------------------------------------- */}
         </Container>
-        <Customizer />
+        {/* <Customizer /> */}
       </PageWrapper>
-    </MainWrapper>
+    </MainWrapper>)
   );
 }
