@@ -1,18 +1,52 @@
-git init
-
-git remote add origin https://github.com/OscuroBok/Oscuro_Next_Dashboard.git -> Add your GitHub repository as a remote
-
-git commit -m "Your commit message"
-
-git add . -> You need to stage the files that you want to commit.
-
-git push -u origin master -> Push the changes to your GitHub repository
+# Oscuro Next Dashboard
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Table of Contents
+- [Project Setup](#project-setup)
+- [Getting Started](#getting-started)
+- [Git Workflow](#git-workflow)
+- [Learn More](#learn-more)
+- [Deployment](#deployment)
+
+## Project Setup
+
+To set up the project, follow the steps below:
+
+1. **Initialize Git Repository**
+    ```bash
+    git init
+    ```
+2. **Add Remote Repository**
+    ```bash
+    git remote add origin https://github.com/OscuroBok/Oscuro_Next_Dashboard.git
+    ```
+3. **Stage Your Changes**
+    ```bash
+    git add .
+    ```
+4. **Commit Your Changes**
+    ```bash
+    git commit -m "Your commit message"
+    ```
+5. **Push to GitHub**
+    ```bash
+    git push -u origin master
+    ```
+
 ## Getting Started
 
-First, run the development server:
+First, install the necessary dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Then, to run the development server:
 
 ```bash
 npm run dev
@@ -22,23 +56,35 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to view the app in the browser. You can start editing the app by modifying `app/page.tsx`; the changes will automatically reload.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load custom Google Fonts like **Inter**.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Git Workflow
+
+- **Stage Files**: Ensure your changes are staged before committing.
+    ```bash
+    git add .
+    ```
+- **Commit Changes**: Add descriptive commit messages.
+    ```bash
+    git commit -m "Your descriptive commit message"
+    ```
+- **Push Changes**: Push your commits to the master branch.
+    ```bash
+    git push origin master
+    ```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project, check out the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs) - Comprehensive guide to Next.js features and API.
+- [Next.js Tutorial](https://nextjs.org/learn) - An interactive tutorial for beginners.
+- [Next.js GitHub](https://github.com/vercel/next.js) - Explore the source code and contribute to the Next.js project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+To deploy this project, use [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), the platform created by the team behind Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+For more details on deployment, refer to the [Next.js deployment documentation](https://nextjs.org/docs/deployment).
